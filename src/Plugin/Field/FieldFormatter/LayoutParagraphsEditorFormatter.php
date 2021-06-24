@@ -95,7 +95,6 @@ class LayoutParagraphsEditorFormatter extends LayoutParagraphsFormatter {
     array $third_party_settings,
     LoggerChannelFactoryInterface $logger_factory,
     EntityDisplayRepositoryInterface $entity_display_repository,
-    LayoutParagraphsService $layout_paragraphs_service,
     EntityTypeBundleInfo $entity_type_bundle_info,
     EntityTypeManagerInterface $entity_type_manager,
     Renderer $renderer,
@@ -113,7 +112,6 @@ class LayoutParagraphsEditorFormatter extends LayoutParagraphsFormatter {
       $third_party_settings,
       $logger_factory,
       $entity_display_repository,
-      $layout_paragraphs_service,
       $renderer
     );
     $this->entityTypeBundleInfo = $entity_type_bundle_info;
@@ -142,7 +140,6 @@ class LayoutParagraphsEditorFormatter extends LayoutParagraphsFormatter {
       $configuration['third_party_settings'],
       $container->get('logger.factory'),
       $container->get('entity_display.repository'),
-      $container->get('layout_paragraphs'),
       $container->get('entity_type.bundle.info'),
       $container->get('entity_type.manager'),
       $container->get('renderer'),
